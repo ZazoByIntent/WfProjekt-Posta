@@ -1,0 +1,390 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "WfProjekt/1.0.0": {
+        "dependencies": {
+          "PS.GlavnoOkno.UI.Base": "4.21.720.1"
+        },
+        "runtime": {
+          "WfProjekt.dll": {}
+        }
+      },
+      "PS.GlavnoOkno.UI.Base/4.21.720.1": {
+        "runtime": {
+          "PS.GlavnoOkno.UI.Base.dll": {
+            "assemblyVersion": "4.21.720.1",
+            "fileVersion": "4.21.720.1"
+          }
+        }
+      },
+      "PS.GlavnoOkno.Model/4.21.720.1": {
+        "runtime": {
+          "PS.GlavnoOkno.Model.dll": {
+            "assemblyVersion": "4.21.720.1",
+            "fileVersion": "4.21.720.1"
+          }
+        }
+      },
+      "PS.Poste.Model/4.21.720.1": {
+        "runtime": {
+          "PS.Poste.Model.dll": {
+            "assemblyVersion": "4.21.720.1",
+            "fileVersion": "4.21.720.1"
+          }
+        }
+      },
+      "PS.Komitenti.Model/4.21.720.1": {
+        "runtime": {
+          "PS.Komitenti.Model.dll": {
+            "assemblyVersion": "4.21.720.1",
+            "fileVersion": "4.21.720.1"
+          }
+        }
+      },
+      "PS.Pogodbe.Model/4.21.720.1": {
+        "runtime": {
+          "PS.Pogodbe.Model.dll": {
+            "assemblyVersion": "4.21.720.1",
+            "fileVersion": "4.21.720.1"
+          }
+        }
+      },
+      "CrystalDecisions.CrystalReports.Engine/13.0.2000.0": {
+        "runtime": {
+          "CrystalDecisions.CrystalReports.Engine.dll": {
+            "assemblyVersion": "13.0.2000.0",
+            "fileVersion": "13.0.20.2399"
+          }
+        }
+      },
+      "CrystalDecisions.Shared/13.0.2000.0": {
+        "runtime": {
+          "CrystalDecisions.Shared.dll": {
+            "assemblyVersion": "13.0.2000.0",
+            "fileVersion": "13.0.20.2399"
+          }
+        }
+      },
+      "CrystalDecisions.ReportSource/13.0.2000.0": {
+        "runtime": {
+          "CrystalDecisions.ReportSource.dll": {
+            "assemblyVersion": "13.0.2000.0",
+            "fileVersion": "13.0.20.2399"
+          }
+        }
+      },
+      "PS.SporocilniSistemCommon/4.21.720.1": {
+        "runtime": {
+          "PS.SporocilniSistemCommon.dll": {
+            "assemblyVersion": "4.21.720.1",
+            "fileVersion": "4.21.720.1"
+          }
+        }
+      },
+      "PS.SkupniSifranti.Model/4.21.720.1": {
+        "runtime": {
+          "PS.SkupniSifranti.Model.dll": {
+            "assemblyVersion": "4.21.720.1",
+            "fileVersion": "4.21.720.1"
+          }
+        }
+      },
+      "PS.Puis.Common/4.21.720.1": {
+        "runtime": {
+          "PS.Puis.Common.dll": {
+            "assemblyVersion": "4.21.720.1",
+            "fileVersion": "4.21.720.1"
+          }
+        }
+      },
+      "Newtonsoft.Json/6.0.0.0": {
+        "runtime": {
+          "Newtonsoft.Json.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.8.18111"
+          }
+        }
+      },
+      "PS.Storitve.Model/4.21.720.1": {
+        "runtime": {
+          "PS.Storitve.Model.dll": {
+            "assemblyVersion": "4.21.720.1",
+            "fileVersion": "4.21.720.1"
+          }
+        }
+      },
+      "CrystalDecisions.ReportAppServer.DataDefModel/13.0.2000.0": {
+        "runtime": {
+          "CrystalDecisions.ReportAppServer.DataDefModel.dll": {
+            "assemblyVersion": "13.0.2000.0",
+            "fileVersion": "13.0.20.2399"
+          }
+        }
+      },
+      "CrystalDecisions.ReportAppServer.ClientDoc/13.0.2000.0": {
+        "runtime": {
+          "CrystalDecisions.ReportAppServer.ClientDoc.dll": {
+            "assemblyVersion": "13.0.2000.0",
+            "fileVersion": "13.0.20.2399"
+          }
+        }
+      },
+      "CrystalDecisions.ReportAppServer.ReportDefModel/13.0.2000.0": {
+        "runtime": {
+          "CrystalDecisions.ReportAppServer.ReportDefModel.dll": {
+            "assemblyVersion": "13.0.2000.0",
+            "fileVersion": "13.0.20.2399"
+          }
+        }
+      },
+      "CrystalDecisions.ReportAppServer.Controllers/13.0.2000.0": {
+        "runtime": {
+          "CrystalDecisions.ReportAppServer.Controllers.dll": {
+            "assemblyVersion": "13.0.2000.0",
+            "fileVersion": "13.0.20.2399"
+          }
+        }
+      },
+      "CrystalDecisions.ReportAppServer.CommLayer/13.0.2000.0": {
+        "runtime": {
+          "CrystalDecisions.ReportAppServer.CommLayer.dll": {
+            "assemblyVersion": "13.0.2000.0",
+            "fileVersion": "13.0.20.2399"
+          }
+        }
+      },
+      "CrystalDecisions.ReportAppServer.DataSetConversion/13.0.2000.0": {
+        "runtime": {
+          "CrystalDecisions.ReportAppServer.DataSetConversion.dll": {
+            "assemblyVersion": "13.0.2000.0",
+            "fileVersion": "13.0.20.2399"
+          }
+        }
+      },
+      "CrystalDecisions.ReportAppServer.Prompting/13.0.2000.0": {
+        "runtime": {
+          "CrystalDecisions.ReportAppServer.Prompting.dll": {
+            "assemblyVersion": "13.0.2000.0",
+            "fileVersion": "13.0.20.2399"
+          }
+        }
+      },
+      "CrystalDecisions.ReportAppServer.XmlSerialize/13.0.2000.0": {
+        "runtime": {
+          "CrystalDecisions.ReportAppServer.XmlSerialize.dll": {
+            "assemblyVersion": "13.0.2000.0",
+            "fileVersion": "13.0.20.2399"
+          }
+        }
+      },
+      "CrystalDecisions.ReportAppServer.CubeDefModel/13.0.2000.0": {
+        "runtime": {
+          "CrystalDecisions.ReportAppServer.CubeDefModel.dll": {
+            "assemblyVersion": "13.0.2000.0",
+            "fileVersion": "13.0.20.2399"
+          }
+        }
+      },
+      "CrystalDecisions.ReportAppServer.CommonObjectModel/13.0.2000.0": {
+        "runtime": {
+          "CrystalDecisions.ReportAppServer.CommonObjectModel.dll": {
+            "assemblyVersion": "13.0.2000.0",
+            "fileVersion": "13.0.20.2399"
+          }
+        }
+      },
+      "CrystalDecisions.ReportAppServer.ObjectFactory/13.0.2000.0": {
+        "runtime": {
+          "CrystalDecisions.ReportAppServer.ObjectFactory.dll": {
+            "assemblyVersion": "13.0.2000.0",
+            "fileVersion": "13.0.20.2399"
+          }
+        }
+      },
+      "SharpZipLib/0.5.0.0": {
+        "runtime": {
+          "SharpZipLib.dll": {
+            "assemblyVersion": "0.5.0.0",
+            "fileVersion": "0.5.0.0"
+          }
+        }
+      },
+      "ADFAM/4.21.720.1": {
+        "runtime": {
+          "ADFAM.dll": {
+            "assemblyVersion": "4.21.720.1",
+            "fileVersion": "4.21.720.1"
+          }
+        }
+      },
+      "CrystalDecisions.ReportAppServer.CommonControls/13.0.2000.0": {
+        "runtime": {
+          "CrystalDecisions.ReportAppServer.CommonControls.dll": {
+            "assemblyVersion": "13.0.2000.0",
+            "fileVersion": "13.0.20.2399"
+          }
+        }
+      },
+      "stdole/7.0.3300.0": {
+        "runtime": {
+          "stdole.dll": {
+            "assemblyVersion": "7.0.3300.0",
+            "fileVersion": "7.0.9466.1"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WfProjekt/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PS.GlavnoOkno.UI.Base/4.21.720.1": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PS.GlavnoOkno.Model/4.21.720.1": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PS.Poste.Model/4.21.720.1": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PS.Komitenti.Model/4.21.720.1": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PS.Pogodbe.Model/4.21.720.1": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CrystalDecisions.CrystalReports.Engine/13.0.2000.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CrystalDecisions.Shared/13.0.2000.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CrystalDecisions.ReportSource/13.0.2000.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PS.SporocilniSistemCommon/4.21.720.1": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PS.SkupniSifranti.Model/4.21.720.1": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PS.Puis.Common/4.21.720.1": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json/6.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PS.Storitve.Model/4.21.720.1": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CrystalDecisions.ReportAppServer.DataDefModel/13.0.2000.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CrystalDecisions.ReportAppServer.ClientDoc/13.0.2000.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CrystalDecisions.ReportAppServer.ReportDefModel/13.0.2000.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CrystalDecisions.ReportAppServer.Controllers/13.0.2000.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CrystalDecisions.ReportAppServer.CommLayer/13.0.2000.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CrystalDecisions.ReportAppServer.DataSetConversion/13.0.2000.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CrystalDecisions.ReportAppServer.Prompting/13.0.2000.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CrystalDecisions.ReportAppServer.XmlSerialize/13.0.2000.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CrystalDecisions.ReportAppServer.CubeDefModel/13.0.2000.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CrystalDecisions.ReportAppServer.CommonObjectModel/13.0.2000.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CrystalDecisions.ReportAppServer.ObjectFactory/13.0.2000.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpZipLib/0.5.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ADFAM/4.21.720.1": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CrystalDecisions.ReportAppServer.CommonControls/13.0.2000.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "stdole/7.0.3300.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WfProjekt.Bll\WfProjekt.Bll.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PS.GlavnoOkno.UI.Base">
+      <HintPath>..\..\..\..\..\..\Projekti\Dev\Dev\Komponente\PS.GlavnoOkno.UI.Base.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

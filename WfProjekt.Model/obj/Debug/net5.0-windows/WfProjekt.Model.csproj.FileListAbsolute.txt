@@ -1,0 +1,12 @@
+C:\Users\hafneral\source\repos\WfProjekt\WfProjekt.Model\obj\Debug\net5.0-windows\WfProjekt.Model.csproj.AssemblyReference.cache
+C:\Users\hafneral\source\repos\WfProjekt\WfProjekt.Model\obj\Debug\net5.0-windows\WfProjekt.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hafneral\source\repos\WfProjekt\WfProjekt.Model\obj\Debug\net5.0-windows\WfProjekt.Model.AssemblyInfoInputs.cache
+C:\Users\hafneral\source\repos\WfProjekt\WfProjekt.Model\obj\Debug\net5.0-windows\WfProjekt.Model.AssemblyInfo.cs
+C:\Users\hafneral\source\repos\WfProjekt\WfProjekt.Model\obj\Debug\net5.0-windows\WfProjekt.Model.csproj.CoreCompileInputs.cache
+C:\Users\hafneral\source\repos\WfProjekt\WfProjekt.Model\bin\Debug\net5.0-windows\WfProjekt.Model.deps.json
+C:\Users\hafneral\source\repos\WfProjekt\WfProjekt.Model\bin\Debug\net5.0-windows\WfProjekt.Model.dll
+C:\Users\hafneral\source\repos\WfProjekt\WfProjekt.Model\bin\Debug\net5.0-windows\ref\WfProjekt.Model.dll
+C:\Users\hafneral\source\repos\WfProjekt\WfProjekt.Model\bin\Debug\net5.0-windows\WfProjekt.Model.pdb
+C:\Users\hafneral\source\repos\WfProjekt\WfProjekt.Model\obj\Debug\net5.0-windows\WfProjekt.Model.dll
+C:\Users\hafneral\source\repos\WfProjekt\WfProjekt.Model\obj\Debug\net5.0-windows\ref\WfProjekt.Model.dll
+C:\Users\hafneral\source\repos\WfProjekt\WfProjekt.Model\obj\Debug\net5.0-windows\WfProjekt.Model.pdb
