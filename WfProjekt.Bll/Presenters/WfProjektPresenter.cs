@@ -11,36 +11,28 @@ namespace WfProjekt.Bll.Presenters
 {
     public class WfProjektPresenter
     {
+        private string _connectionString;
         IWfProjekt WfProjektView;
-        public WfProjektPresenter (IWfProjekt view)
+        WfProjektBll _service;
+        public WfProjektPresenter (IWfProjekt aView, string aConnectionString)
         {
-            WfProjektView = view;
+            _connectionString = aConnectionString;
+            WfProjektView = aView;
+            _service = new WfProjektBll(_connectionString);
+        }
+        public void InsertValues(WfProjektModel aModel)
+        {
+            _service.InsertValues(aModel);
         }
 
-        /*
-        private WfProjektModel createModel()
+        public void UpdateValues(WfProjektModel aModel)
         {
-            return WfProjektBll.createModel(WfProjektView);
-        }
-        */
-
-        private WfProjektModel nastaviPodatke()
-        {
-            return WfProjektView.nastaviPodatke(new WfProjektModel());
-        }
-        public void insertValues()
-        {
-            WfProjektBll.insertValues(nastaviPodatke());
+            _service.UpdateValues(aModel);
         }
 
-        public void updateValues()
+        public void SelectValues()
         {
-            WfProjektBll.updateValues(nastaviPodatke());
-        }
-
-        public void selectValues()
-        {
-            WfProjektView.prikaziPodatke(WfProjektBll.selectValues());
+            WfProjektView.PrikaziPodatke(_service.SelectValues());
         }
     }
 }

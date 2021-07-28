@@ -11,58 +11,46 @@ namespace WfProjekt.Dal.Manager
 {
     public class WfProjektManager
     {
-        const string _connection = "Data Source=172.26.160.19;Initial Catalog=UPODb;User ID=razvoj;Password=Razvoj3";
-        const string queryStringSelect = "SELECT TOP (1) [Racun], [PostaId], [DelovnoMestoId], [UporabnikId], [Vrednost], [OznakaValute], [ZnesekPostnine], [Ime], [HisnaSt], [Namen]  FROM [UPODb].[dbo].[dpnBN02]";
-        const string queryStringUpdate = "UPDATE [UPODb].[dbo].[dpnBN02] SET DelovnoMestoID = '6' WHERE POSTAID = ";
-        const string queryStringInsert = "INSERT INTO [UPODb].[dbo].[dpnBN02] ([Racun], [PostaId], [DelovnoMestoId], [UporabnikId], [Vrednost], [OznakaValute], [ZnesekPostnine], [Ime], [HisnaSt], [Namen]) VALUES (";
+        private string _connectionString;
 
-        
-        public static WfProjektModel selectValues()
+        #region Constants
+        //const string _connectionString = "Data Source=172.26.160.19;Initial Catalog=UPODb;User ID=razvoj;Password=Razvoj3"; // pridobi iz UI, iz app.config
+        const string QUERY_STRING_SELECT = "SELECT TOP (1) [Racun], [PostaId], [DelovnoMestoId], [UporabnikId], [Vrednost], [OznakaValute], [ZnesekPostnine], [Ime], [HisnaSt], [Namen]  FROM [UPODb].[dbo].[dpnBN02]";
+        const string QUERY_STRING_UPDATE = "UPDATE [UPODb].[dbo].[dpnBN02] SET DelovnoMestoID = '7' WHERE POSTAID = ";
+        const string QUERY_STRING_INSERT = "INSERT INTO [UPODb].[dbo].[dpnBN02] ([Racun], [PostaId], [DelovnoMestoId], [UporabnikId], [Vrednost], [OznakaValute], [ZnesekPostnine], [Ime], [HisnaSt], [Namen]) VALUES (";
+        #endregion
+
+
+        public WfProjektManager(string aConnectionString)
         {
-            using (SqlConnection connection = new SqlConnection(_connection))
+            _connectionString = aConnectionString;
+        }
+
+        public WfProjektModel SelectValues()
+        {
+            using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                SqlCommand command = new SqlCommand(queryStringSelect, connection);
+                SqlCommand command = new SqlCommand(QUERY_STRING_SELECT, connection);
                 connection.Open();
-                SqlDataReader dataReader = command.ExecuteReader();
-                WfProjektModel aModel = new WfProjektModel();
+                SqlDataReader dataReader = command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
                 if (dataReader.Read())
-                    aModel = Mappers.WfProjektMapper.FillFromReader(dataReader);
-                return aModel;
+                    return new Mappers.WfProjektMapper().FillFromReader(dataReader);
+                else return new WfProjektModel();
             }
         }
-
-        /*
-        public static WfProjektModel selectValues()
+        public void UpdateValues(WfProjektModel aModel)
         {
-                using (SqlConnection connection = new SqlConnection(_connection))
-                {
-                    connection.Open();
-                    SqlCommand command = new SqlCommand("[UPODb].[dbo].[dpnBN02Select]", connection);
-                    command.CommandType = System.Data.CommandType.StoredProcedure;
-
-                    SqlDataReader activeReader = command.ExecuteReader();
-                    WfProjektModel aModel = new WfProjektModel();
-                    if (activeReader.Read())
-                        aModel = Mappers.WfProjektMapper.FillFromReader(activeReader);
-                    return aModel;
-                }
-        }
-        
-        */
-
-        public void updateValues(WfProjektModel aModel)
-        {
-            using (SqlConnection connection = new SqlConnection(_connection))
+            using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
-                SqlCommand command = new SqlCommand(queryStringUpdate + aModel.IDPoste, connection);
+                SqlCommand command = new SqlCommand(QUERY_STRING_UPDATE + aModel.IDPoste, connection);
                 command.ExecuteNonQuery();
             }
         }
 
-        public void insertValues(WfProjektModel aModel)
+        public void InsertValues(WfProjektModel aModel)
         {
-            using (SqlConnection connection = new SqlConnection(_connection))
+            using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand("[UPODb].[dbo].[dpnBN02Update]", connection);
@@ -81,11 +69,31 @@ namespace WfProjekt.Dal.Manager
                 command.Parameters.Add(new SqlParameter("@OznakaValute", aModel.oznakaValute));
                 command.Parameters.Add(new SqlParameter("@Ime", aModel.ime));
                 command.Parameters.Add(new SqlParameter("@HisnaSt", aModel.hisnaStevilka));
-                command.Parameters.Add(new SqlParameter("@Namen", aModel.namen));
-
+                command.Parameters.Add(new SqlParameter("@Namen", aModel.namen)); // Dodaj ostale, microsoft wrapper?
                 command.ExecuteNonQuery();
             }
         }
+
+        /*
+         * Napisano z stored procedurami
+         * 
+        public static WfProjektModel selectValues()
+        {
+                using (SqlConnection connection = new SqlConnection(_connection))
+                {
+                    connection.Open();
+                    SqlCommand command = new SqlCommand("[UPODb].[dbo].[dpnBN02Select]", connection);
+                    command.CommandType = System.Data.CommandType.StoredProcedure;
+
+                    SqlDataReader activeReader = command.ExecuteReader();
+                    WfProjektModel aModel = new WfProjektModel();
+                    if (activeReader.Read())
+                        aModel = Mappers.WfProjektMapper.FillFromReader(activeReader);
+                    return aModel;
+                }
+        }
+        
+        */
 
     }
 }

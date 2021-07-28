@@ -10,7 +10,7 @@ using WfProjekt.Model;
 
 namespace WfProjekt.Bll
 {
-    public static class WfProjektBll
+    public class WfProjektBll
     {
         /*
         public static WfProjektModel createModel(IWfProjekt WfProjektView)
@@ -19,22 +19,27 @@ namespace WfProjekt.Bll
                 WfProjektView.oznakaValute, WfProjektView.vrednostText, WfProjektView.znesekPostnineText, WfProjektView.imeText, WfProjektView.hisnaStevilkaText, WfProjektView.namenText);
         }
         */
+        private string _connectionString;
 
-        public static void insertValues(WfProjektModel aModel)
+        public WfProjektBll(string aConnectionString)
         {
-            WfProjektManager manager = new WfProjektManager();
-            manager.insertValues(aModel);
+            _connectionString = aConnectionString;
         }
 
-        public static void updateValues(WfProjektModel aModel)
+        public void InsertValues(WfProjektModel aModel)
         {
-            WfProjektManager manager = new WfProjektManager();
-            manager.updateValues(aModel);
+
+            new WfProjektManager(_connectionString).InsertValues(aModel); // Ne naredis globalnega, ker se rabi samo parkrat
         }
 
-        public static WfProjektModel selectValues()
+        public void UpdateValues(WfProjektModel aModel)
         {
-            return WfProjektManager.selectValues();
+            new WfProjektManager(_connectionString).UpdateValues(aModel);
+        }
+
+        public WfProjektModel SelectValues()
+        {
+            return new WfProjektManager(_connectionString).SelectValues();
         }
     }
 }

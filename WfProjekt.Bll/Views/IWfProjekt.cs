@@ -22,10 +22,8 @@ namespace WfProjekt.Bll.Views
         string namenText { get; set; }
 
 
-        WfProjektModel nastaviPodatke(WfProjektModel aModel);
-        void prikaziPodatke(WfProjektModel aModel);
-        
+        WfProjektModel VrniPodatke();
+        void PrikaziPodatke(WfProjektModel aModel);
 
-    
     }
 }

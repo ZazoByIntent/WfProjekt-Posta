@@ -15,14 +15,8 @@ namespace WfProjekt
 {
     public partial class FrmTest : Form, IWfProjekt
     {
-        #region Constants
 
-        #endregion
-
-
-        #region Private Members
-
-        #endregion
+        private string _connectionString = "Data Source=172.26.160.19;Initial Catalog=UPODb;User ID=razvoj;Password=Razvoj3";
 
         #region Constructors
 
@@ -30,7 +24,6 @@ namespace WfProjekt
         {
             InitializeComponent();
         }
-
         public long stRacunaText { get { return Convert.ToInt64(txtStevilkaRacuna.Text); } set { txtStevilkaRacuna.Text = value.ToString(); } } 
         public int IDPosteText { get { return Convert.ToInt32(txtPostaID.Text); } set { txtPostaID.Text = value.ToString(); } }
         public int IDUporabnikaText { get { return Convert.ToInt32(txtUporabnikID.Text); } set { txtUporabnikID.Text = value.ToString(); } }
@@ -43,25 +36,9 @@ namespace WfProjekt
         public string namenText { get { return txtNamen.Text; } set { txtNamen.Text = value; } }
 
         #endregion
-        private void btnGetInfo_Click(object sender, EventArgs e)
-        {
-            WfProjektPresenter presenter = new WfProjektPresenter(this); // Ne bi kreacija presenterja mogla biti v View?
-            presenter.selectValues();
-        }
+        
 
-        private void btnSendInfo_Click(object sender, EventArgs e)
-        {
-            WfProjektPresenter presenter = new WfProjektPresenter(this);
-            presenter.updateValues();
-        }
-
-        private void btnInsertInfo_Click(object sender, EventArgs e)
-        {
-            WfProjektPresenter presenter = new WfProjektPresenter(this);
-            presenter.insertValues();
-        }
-
-        public void prikaziPodatke(WfProjektModel aModel)
+        public void PrikaziPodatke(WfProjektModel aModel)
         {
             txtStevilkaRacuna.Text = aModel.stRacuna.ToString();
             txtPostaID.Text = aModel.IDPoste.ToString();
@@ -74,20 +51,44 @@ namespace WfProjekt
             txtHisnaStevilka.Text = aModel.hisnaStevilka;
             txtNamen.Text = aModel.namen;
         }
-
-        public WfProjektModel nastaviPodatke(WfProjektModel aModel)
+        public WfProjektModel VrniPodatke()
         {
-            aModel.stRacuna = Convert.ToInt64(txtStevilkaRacuna.Text);
-            aModel.IDPoste = Convert.ToInt32(txtPostaID.Text);
-            aModel.IDUporabnika = Convert.ToInt32(txtUporabnikID.Text);
-            aModel.IDDelovnegaMesta = Convert.ToInt32(txtDelovnoMestoID.Text);
-            aModel.vrednost = Convert.ToDouble(txtVrednost.Text);
-            aModel.znesekPostnine = Convert.ToDouble(txtZnesekPostnine.Text);
-            aModel.oznakaValute = txtOznakaValute.Text;
-            aModel.ime = txtIme.Text;
-            aModel.hisnaStevilka = txtHisnaStevilka.Text;
-            aModel.namen = txtNamen.Text;
-            return aModel;
+            /* 
+             * Primer vrinjenega konstruktorja
+            WfProjektModel model = new WfProjektModel
+            {
+                IDPoste = 1,
+                ime = string.Empty
+            };
+            */
+
+            WfProjektModel model = new WfProjektModel();
+            model.stRacuna = Convert.ToInt64(txtStevilkaRacuna.Text);
+            model.IDPoste = Convert.ToInt32(txtPostaID.Text);
+            model.IDUporabnika = Convert.ToInt32(txtUporabnikID.Text);
+            model.IDDelovnegaMesta = Convert.ToInt32(txtDelovnoMestoID.Text);
+            model.vrednost = Convert.ToDouble(txtVrednost.Text);
+            model.znesekPostnine = Convert.ToDouble(txtZnesekPostnine.Text);
+            model.oznakaValute = txtOznakaValute.Text;
+            model.ime = txtIme.Text;
+            model.hisnaStevilka = txtHisnaStevilka.Text;
+            model.namen = txtNamen.Text;
+            return model;
+        }
+
+        private void btnGetInfo_Click(object sender, EventArgs e)
+        {
+            new WfProjektPresenter(this, _connectionString).SelectValues(); // globalni presenter
+        }
+
+        private void btnSendInfo_Click(object sender, EventArgs e)
+        {
+            new WfProjektPresenter(this, _connectionString).UpdateValues(VrniPodatke());
+        }
+
+        private void btnInsertInfo_Click(object sender, EventArgs e)
+        {
+            new WfProjektPresenter(this, _connectionString).InsertValues(VrniPodatke());
         }
     }
 }
