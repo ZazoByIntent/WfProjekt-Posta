@@ -45,7 +45,7 @@ namespace WfProjekt
         #endregion
         private void btnGetInfo_Click(object sender, EventArgs e)
         {
-            WfProjektPresenter presenter = new WfProjektPresenter(this);
+            WfProjektPresenter presenter = new WfProjektPresenter(this); // Ne bi kreacija presenterja mogla biti v View?
             presenter.selectValues();
         }
 
